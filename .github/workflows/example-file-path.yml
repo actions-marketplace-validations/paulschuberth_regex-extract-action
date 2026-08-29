@@ -8,7 +8,7 @@ jobs:
   extract:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v6
+      - uses: actions/checkout@v7
       - name: Extract from file
         uses: paulschuberth/regex-extract-action@v2
         id: example-path
@@ -26,7 +26,7 @@ jobs:
         issue: ${{ fromJson(needs.extract.outputs.issues) }}
     steps:
       - name: Use output of default settings
-        uses: actions/github-script@v8
+        uses: actions/github-script@v9
         with:
           script: |
             github.rest.issues.createComment({

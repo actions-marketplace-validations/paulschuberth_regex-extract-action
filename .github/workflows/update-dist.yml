@@ -13,12 +13,12 @@ jobs:
     runs-on: ubuntu-latest
     if: contains(github.event.pull_request.labels.*.name, 'dependencies')
     steps:
-      - uses: actions/checkout@v6
+      - uses: actions/checkout@v7
         with:
           ref: ${{ github.head_ref }}
           token: ${{ github.token }} # Replace github.token with PAT (personal access token) if you need to trigger a new workflow. https://git.io/JcHD9
       - name: Use Node.js v24.x
-        uses: actions/setup-node@v6
+        uses: actions/setup-node@v7
         with:
           node-version: 24.x
           # It is not suggested to cache for the pull_request_target event
