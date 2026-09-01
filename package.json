@@ -27,7 +27,7 @@
   "author": "Paul Schuberth",
   "license": "MIT",
   "dependencies": {
-    "@actions/core": "^1.11.1"
+    "@actions/core": "^2.0.2"
   },
   "devDependencies": {
     "@eslint/js": "^9.29.0",
